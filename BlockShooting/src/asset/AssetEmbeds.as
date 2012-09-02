@@ -10,10 +10,14 @@ package asset
 		public static const BallBitmap:Class;
 		[Embed(source = "assets/block.png")]
 		public static const BlockBitmap:Class;
-		[Embed(source = "assets/boss.png")]
-		public static const BossBitmap:Class;
-		[Embed(source = "assets/missile.png")]
-		public static const MissileBitmap:Class;
+		[Embed(source = "assets/boss1.png")]
+		public static const Boss1Bitmap:Class;
+		[Embed(source = "assets/boss_green.png")]
+		public static const BossGreenBitmap:Class;
+		[Embed(source = "assets/missile1.png")]
+		public static const Missile1Bitmap:Class;
+		[Embed(source = "assets/missile2.png")]
+		public static const Missile2Bitmap:Class;
 		[Embed(source = "assets/explosion.png")]
 		public static const ExplosionBitmap:Class;
 		[Embed(source = "assets/explosion.xml", mimeType="application/octet-stream")]
