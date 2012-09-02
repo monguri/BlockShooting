@@ -17,6 +17,9 @@ package object.backGround
 	
 	public class BackGroundManager extends DisplayObjectContainer implements IFManager
 	{
+		private var _backGround1:BackGround;
+		private var _backGround2:BackGround;
+
 		public function BackGroundManager()
 		{
 		}
@@ -25,14 +28,14 @@ package object.backGround
 		{
 			var texture:Texture = AssetsManager.getTexture(backGroundElem.@img);
 			var speed:int = parseInt(backGroundElem.@speed);
-			var backGround1:BackGround = new BackGround(texture);
-			var backGround2:BackGround = new BackGround(texture);
-			backGround1.vy = speed;
-			backGround2.vy = speed;
-			backGround1.y = 0;
-			backGround2.y = -Const.SCREEN_HEIGHT + 100;
-			addChild(backGround1);
-			addChild(backGround2);
+			_backGround1 = new BackGround(texture);
+			_backGround2 = new BackGround(texture);
+			_backGround1.vy = speed;
+			_backGround2.vy = speed;
+			_backGround1.y = 0;
+			_backGround2.y = -Const.SCREEN_HEIGHT + 100;
+			addChild(_backGround1);
+			addChild(_backGround2);
 		}
 
 		public function initialize():void
@@ -60,6 +63,12 @@ package object.backGround
 
 		public function stop():void
 		{
+		}
+
+		public function setSpeed(speed:int):void
+		{
+			_backGround1.vy = speed;
+			_backGround2.vy = speed;
 		}
 	}
 }

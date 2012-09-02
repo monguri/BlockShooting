@@ -169,6 +169,9 @@ package scene
 			}
 			
 			var xml:XML = AssetsManager.getXml("Stage" + _stage + "BossXml");
+			// backGroundをfinalizeせずにスピードだけアップ
+			_backGroundManager.setSpeed(parseInt(xml.backGround[0].@speed));
+
 			_bossManager = new BossManager();
 			_bossManager.createFromXml(xml.bosses[0]);
 
