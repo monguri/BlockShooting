@@ -19,6 +19,9 @@ package object.boss
 	
 	public class SimpleBoss extends EnemyObjectBase
 	{
+		private static const APPEAR_SPEED:int = 1;
+		private static const BOSS_INITIAL_X:int = Const.SCREEN_WIDTH >> 1;
+		private static const BOSS_Y:int = Const.SCREEN_HEIGHT / 6;
 		private static const SPEED:int = 3;
 		private var _bulletTimer:Timer = new Timer(0, 0); // delay=0はとりあえず入れてるだけ
 		private var _defeatedEffectTimer:Timer = new Timer(300, 10);
@@ -32,15 +35,10 @@ package object.boss
 
 		override public function start():void
 		{
-			x = Const.SCREEN_WIDTH >> 1;
-			y = Const.SCREEN_HEIGHT / 6;
-			
-			vx = SPEED;
-			
-			addEventListener(Event.ENTER_FRAME, enterFrameHandler);
-			_bulletTimer.delay = _bulletInterval;
-			_bulletTimer.addEventListener(TimerEvent.TIMER, bulletTimerHandler);
-			_bulletTimer.start();
+			x = BOSS_INITIAL_X;
+			y = -height;
+			vy = APPEAR_SPEED;
+			addEventListener(Event.ENTER_FRAME, apperanceModeEnterFrameHandler);
 		}
 		
 		override public function stop():void
@@ -52,6 +50,26 @@ package object.boss
 			vx = 0;
 		}
 
+		private function apperanceModeEnterFrameHandler(e:Event):void
+		{
+			if (y + vy >= BOSS_Y)
+			{
+				x = BOSS_INITIAL_X;
+				y = BOSS_Y;
+				
+				vx = SPEED;
+				
+				removeEventListener(Event.ENTER_FRAME, apperanceModeEnterFrameHandler);
+				addEventListener(Event.ENTER_FRAME, enterFrameHandler);
+				_bulletTimer.delay = _bulletInterval;
+				_bulletTimer.addEventListener(TimerEvent.TIMER, bulletTimerHandler);
+				_bulletTimer.start();
+				return;
+			}
+
+			y += vy;
+		}
+		
 		protected function bulletTimerHandler(event:TimerEvent):void
 		{
 			var texture:Texture = AssetsManager.getTexture(_bulletTexture);
