@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stageBoss>
+	<backGround img="BackGroundBitmap" speed="7"/>
+	<bgm sound=""/>
+	
+	<bosses>
+		<boss life="1" bulletInterval="2000" className="object.boss.SimpleBoss" img="BossBitmap">
+			<bullet speed="8" className="object.bullet.SimpleBullet" img="MissileBitmap"/>
+			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
+		</boss>
+	</bosses>
+</stageBoss>
