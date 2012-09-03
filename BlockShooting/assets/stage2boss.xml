@@ -5,7 +5,7 @@
 	
 	<bosses>
 		<boss life="1" bulletInterval="2000" className="object.boss.SimpleBoss" img="BossGreenBitmap" initX="320" initY="160" initVx="3">
-			<bullet speed="8" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+			<bullet speed="8" className="object.bullet.SimpleBullet" img="Missile1Bitmap"/>
 			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
 		</boss>
 	</bosses>

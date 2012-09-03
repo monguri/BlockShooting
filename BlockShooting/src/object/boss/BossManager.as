@@ -132,6 +132,7 @@ package object.boss
 		private function selfDisposeHandler(event:Event):void
 		{
 			var boss:EnemyObjectBase = event.currentTarget as EnemyObjectBase;
+			boss.stop();
 			boss.removeEventListener(CollisionEvent.COLLISION, boss.collisionHandler);
 			boss.removeEventListener(EnemyObjectBase.EVENT_TYPE_SELF_DISPOSE, selfDisposeHandler);
 			_bossLayer.removeChild(boss);
@@ -156,14 +157,6 @@ package object.boss
 			{
 				boss = _bossLayer.getChildAt(i) as EnemyObjectBase;
 				boss.stop();
-			}
-
-			num = _bulletLayer.numChildren;
-			var bullet:BulletObjectBase;
-			for (var j:uint; j < num; j++)
-			{
-				bullet = _bulletLayer.getChildAt(j) as BulletObjectBase;
-				bullet.stop();
 			}
 		}
 

@@ -10,10 +10,14 @@ package asset
 		public static const BallBitmap:Class;
 		[Embed(source = "assets/block.png")]
 		public static const BlockBitmap:Class;
+		[Embed(source = "assets/enemy_big.png")]
+		public static const EnemyBigBitmap:Class;
 		[Embed(source = "assets/boss1.png")]
 		public static const Boss1Bitmap:Class;
 		[Embed(source = "assets/boss_green.png")]
 		public static const BossGreenBitmap:Class;
+		[Embed(source = "assets/boss_parent.png")]
+		public static const BossParentBitmap:Class;
 		[Embed(source = "assets/missile1.png")]
 		public static const Missile1Bitmap:Class;
 		[Embed(source = "assets/missile2.png")]
@@ -32,6 +36,10 @@ package asset
 		public static const Stage2Xml:Class;
 		[Embed(source="assets/stage2boss.xml", mimeType="application/octet-stream")]
 		public static const Stage2BossXml:Class;
+		[Embed(source="assets/stage3.xml", mimeType="application/octet-stream")]
+		public static const Stage3Xml:Class;
+		[Embed(source="assets/stage3boss.xml", mimeType="application/octet-stream")]
+		public static const Stage3BossXml:Class;
 
 	}
 }

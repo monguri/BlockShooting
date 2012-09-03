@@ -40,7 +40,7 @@ package scene
 		/** 初期残機数 */
 		private static const INITIAL_LIFE:uint = 3;
 		/** 面数 */
-		private static const NUM_STAGE:uint = 2;
+		private static const NUM_STAGE:uint = 3
 
 		public function Play(stage:Object)
 		{
@@ -100,7 +100,7 @@ package scene
 			_enemyManager.start();
 			
 			// デバッグのため
-//			enterBossMode();
+			enterBossMode();
 		}
 		
 //		private function createStageDataCompleteHandler(event:Event):void
@@ -285,9 +285,9 @@ package scene
 
 			// バーとミサイルの当たり判定
 			var bulletLayer:Sprite = _bossManager.bulletLayer;
-			var bulletNum:int = bulletLayer.numChildren;
+//			var bulletNum:int = bulletLayer.numChildren;
 			var bullet:BulletObjectBase;
-			for (var j:int = 0; j < bulletNum; j++)
+			for (var j:int = 0; j < bulletLayer.numChildren; j++)
 			{
 				bullet = bulletLayer.getChildAt(j) as BulletObjectBase;
 				if (bullet.y > Const.BAR_Y - (_bar.height << 1)

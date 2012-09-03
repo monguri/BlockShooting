@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stageBoss>
+	<backGround img="BackGroundBitmap" speed="7"/>
+	<bgm sound=""/>
+	
+	<bosses>
+		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="BossParentBitmap" initX="320" initY="160" initVx="0">
+			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile1Bitmap"/>
+			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
+		</boss>
+		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="128" initY="320" initVx="3">
+			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
+		</boss>
+		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="256" initY="320" initVx="3">
+			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
+		</boss>
+		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="384" initY="320" initVx="-3">
+			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
+		</boss>
+		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="512" initY="320" initVx="-3">
+			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
+		</boss>
+	</bosses>
+</stageBoss>
