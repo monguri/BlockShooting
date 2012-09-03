@@ -68,6 +68,7 @@ package object.boss
 				boss.bulletInterval = parseInt(bossElem.@bulletInterval);
 				boss.initX = parseInt(bossElem.@initX);
 				boss.initY = parseInt(bossElem.@initY);
+				boss.initVx = parseInt(bossElem.@initVx);
 				//ボスはすぐstageに登場させる
 				boss.bulletLayer = _bulletLayer;
 				boss.explosionLayer = _explosionLayer;

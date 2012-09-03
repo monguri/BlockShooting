@@ -20,8 +20,6 @@ package object.boss
 	public class SimpleBoss extends EnemyObjectBase
 	{
 		private static const APPEAR_SPEED:int = 1;
-		private static const BOSS_INITIAL_X:int = Const.SCREEN_WIDTH >> 1;
-		private static const BOSS_Y:int = Const.SCREEN_HEIGHT / 6;
 		private static const SPEED:int = 3;
 		private var _bulletTimer:Timer = new Timer(0, 0); // delay=0はとりあえず入れてるだけ
 		private var _defeatedEffectTimer:Timer = new Timer(300, 10);
@@ -57,7 +55,7 @@ package object.boss
 				x = _initX;
 				y = _initY;
 				
-				vx = SPEED;
+				vx = _initVx;
 				
 				removeEventListener(Event.ENTER_FRAME, apperanceModeEnterFrameHandler);
 				addEventListener(Event.ENTER_FRAME, enterFrameHandler);
