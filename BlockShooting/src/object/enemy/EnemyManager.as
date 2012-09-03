@@ -35,8 +35,8 @@ package object.enemy
 				texture = AssetsManager.getTexture(enemyElem.@img);
 				enemyClass = getDefinitionByName(enemyElem.@className) as Class;
 				enemy = new enemyClass(texture);
-				enemy.x = parseInt(enemyElem.@x);
-				enemy.y = parseInt(enemyElem.@y);
+				enemy.initX = parseInt(enemyElem.@initX);
+				enemy.initY = parseInt(enemyElem.@initY);
 				enemy.life = parseInt(enemyElem.@life);
 				addChild(enemy);
 			}

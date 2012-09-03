@@ -23,6 +23,8 @@ package object.enemy
 		protected var _explosionTexture:String = null;
 		protected var _explosionClass:Class;
 		protected var _explosionLayer:Sprite;
+		protected var _initX:int;
+		protected var _initY:int;
 		
 		public static const EVENT_TYPE_SELF_DISPOSE:String = "selfDispose";
 
@@ -98,6 +100,16 @@ package object.enemy
 		public function set explosionLayer(value:Sprite):void
 		{
 			_explosionLayer = value;
+		}
+
+		public function set initX(value:int):void
+		{
+			_initX = value;
+		}
+
+		public function set initY(value:int):void
+		{
+			_initY = value;
 		}
 
 	}

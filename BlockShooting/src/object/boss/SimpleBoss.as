@@ -35,7 +35,7 @@ package object.boss
 
 		override public function start():void
 		{
-			x = BOSS_INITIAL_X;
+			x = _initX;
 			y = -height;
 			vy = APPEAR_SPEED;
 			addEventListener(Event.ENTER_FRAME, apperanceModeEnterFrameHandler);
@@ -52,10 +52,10 @@ package object.boss
 
 		private function apperanceModeEnterFrameHandler(e:Event):void
 		{
-			if (y + vy >= BOSS_Y)
+			if (y + vy >= _initY)
 			{
-				x = BOSS_INITIAL_X;
-				y = BOSS_Y;
+				x = _initX;
+				y = _initY;
 				
 				vx = SPEED;
 				
@@ -155,6 +155,5 @@ package object.boss
 			_defeatedEffectTimer = null;
 			dispatchEvent(new Event(EnemyObjectBase.EVENT_TYPE_SELF_DISPOSE));
 		}
-		
 	}
 }

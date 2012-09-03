@@ -4,39 +4,39 @@
 	<bgm sound=""/>
 	
 	<enemies>
-		<enemy x="80" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="128" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="176" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="224" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="272" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="320" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="368" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="416" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="464" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="512" y="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="80" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="128" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="176" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="224" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="272" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="320" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="368" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="416" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="464" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="512" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 
 		<!--
-		<enemy x="80" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="128" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="176" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="224" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="272" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="320" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="368" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="416" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="464" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="512" y="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="80" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="128" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="176" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="224" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="272" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="320" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="368" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="416" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="464" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="512" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 
-		<enemy x="80" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="128" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="176" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="224" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="272" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="320" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="368" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="416" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="464" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
-		<enemy x="512" y="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="80" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="128" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="176" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="224" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="272" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="320" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="368" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="416" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="464" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<enemy initX="512" initY="112" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		-->
 	</enemies>
 </stage>

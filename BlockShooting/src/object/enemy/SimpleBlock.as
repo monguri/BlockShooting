@@ -1,7 +1,5 @@
 package object.enemy
 {
-	import asset.AssetsManager;
-	
 	import object.CollisionEvent;
 	
 	import starling.events.Event;
@@ -12,6 +10,12 @@ package object.enemy
 		public function SimpleBlock(texture:Texture)
 		{
 			super(texture);
+		}
+		
+		override public function start():void
+		{
+			x = _initX;
+			y = _initY;
 		}
 
 		override public function collisionHandler(event:CollisionEvent):void
