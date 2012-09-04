@@ -207,20 +207,17 @@ package scene
 				}
 			}
 
-			if (_enemyManager == null) {
-				return;
-			}
-
 			// ループが回っている間に、イベントハンドラによってremoveChildされることがあるので
 			// あえて毎ループnumChildrenにアクセスしている
 			if (_ball.y < Const.SCREEN_HEIGHT >> 2) { // ボールが画面半分より上にあるときに衝突判定
 				var enemy:EnemyObjectBase;
-				for (var i:int = 0; i < _enemyManager.numChildren; i++)
+				var numEnemy:int = _enemyManager.numChildren;
+				for (var i:int = numEnemy - 1; i >= 0; i--)
 				{
 					enemy = _enemyManager.getChildAt(i) as EnemyObjectBase;
 					intersectRect = getCollisionRectangle(_ball, enemy);
 					if (intersectRect != null)
-				{
+					{
 						sendCollisionEventToBall(_ball, enemy, intersectRect);
 						enemy.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
 					}
@@ -248,16 +245,12 @@ package scene
 				}
 			}
 
-			if (_bossManager == null) {
-				return;
-			}
-
 			// ボールとボスの当たり判定
 			// TODO:もうちょい絞れるはず
 			var bossLayer:Sprite = _bossManager.bossLayer;
-			var bossNum:int = bossLayer.numChildren;
 			var boss:EnemyObjectBase;
-			for (var i:int = 0; i < bossNum; i++)
+			var numBoss:int = bossLayer.numChildren;
+			for (var i:int = numBoss - 1; i >= 0; i--)
 			{
 				boss = bossLayer.getChildAt(i) as EnemyObjectBase;
 				if (_ball.y > boss.y - boss.height 
@@ -277,17 +270,14 @@ package scene
 			
 			if (_bossManager.bossLayer.numChildren == 0) {
 				defeatBoss();
-			}
-				
-			if (_bossManager == null) {
 				return;
 			}
-
+				
 			// バーとミサイルの当たり判定
 			var bulletLayer:Sprite = _bossManager.bulletLayer;
-//			var bulletNum:int = bulletLayer.numChildren;
 			var bullet:BulletObjectBase;
-			for (var j:int = 0; j < bulletLayer.numChildren; j++)
+			var numBullet:int = bulletLayer.numChildren;
+			for (var j:int = numBullet - 1; j >= 0; j--)
 			{
 				bullet = bulletLayer.getChildAt(j) as BulletObjectBase;
 				if (bullet.y > Const.BAR_Y - (_bar.height << 1)
