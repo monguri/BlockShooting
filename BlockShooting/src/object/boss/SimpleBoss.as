@@ -124,8 +124,8 @@ package object.boss
 		private function enterFrameHandler(e:Event):void
 		{
 			x += vx;
-			if (x - (width / 2) < Const.SCREEN_WIDTH / 6
-				|| x + (width >> 2) > Const.SCREEN_WIDTH * 5 / 6)
+			if (x - pivotX < Const.SCREEN_WIDTH / 6
+				|| x + pivotX > Const.SCREEN_WIDTH * 5 / 6)
 			{
 				vx = -vx;
 				x += vx; // 境界から少し離して境界で毎フレーム反射を繰り返さないようにするう
