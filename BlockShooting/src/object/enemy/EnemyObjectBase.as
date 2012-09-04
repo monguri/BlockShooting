@@ -1,13 +1,7 @@
 package object.enemy
 {
-	import dataModel.IFXmlData;
-	
-	import flash.utils.getDefinitionByName;
-	import flash.utils.getQualifiedClassName;
-	
 	import object.CollisionEvent;
 	import object.ImageObjectBase;
-	import object.enemy.IFEnemy;
 	
 	import starling.display.Sprite;
 	import starling.textures.Texture;
