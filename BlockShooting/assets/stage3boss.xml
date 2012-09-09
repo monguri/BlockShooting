@@ -4,24 +4,24 @@
 	<bgm sound=""/>
 	
 	<bosses>
-		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="BossParentBitmap" initX="320" initY="160" initVx="0">
+		<boss life="3" bulletInterval="4000" className="object.boss.SimpleBoss" img="BossParentBitmap" initX="320" initY="160" initVx="0">
 			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile1Bitmap"/>
 			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
 		</boss>
-		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="128" initY="320" initVx="3">
-			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+		<boss life="3" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="144" initY="240" initVx="3">
+			<bullet speed="4" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
 			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
 		</boss>
-		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="256" initY="320" initVx="3">
-			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+		<boss life="3" bulletInterval="5000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="256" initY="240" initVx="3">
+			<bullet speed="4" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
 			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
 		</boss>
-		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="384" initY="320" initVx="-3">
-			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+		<boss life="3" bulletInterval="5000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="384" initY="240" initVx="-3">
+			<bullet speed="4" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
 			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
 		</boss>
-		<boss life="1" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="512" initY="320" initVx="-3">
-			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
+		<boss life="3" bulletInterval="4000" className="object.boss.SimpleBoss" img="EnemyBigBitmap" initX="496" initY="240" initVx="-3">
+			<bullet speed="4" className="object.bullet.SimpleBullet" img="Missile2Bitmap"/>
 			<explosion className="object.explosion.SimpleExplosion" img="Explosion"/>
 		</boss>
 	</bosses>
