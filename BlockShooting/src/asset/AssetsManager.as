@@ -1,6 +1,7 @@
 package asset
 {
 	import flash.display.Bitmap;
+	import flash.media.Sound;
 	import flash.utils.Dictionary;
 	
 	import starling.textures.Texture;
@@ -12,6 +13,7 @@ package asset
 		private static var textures:Object = new Object();
 		private static var textureAtlases:Object = new Object();
 		private static var xmls:Object = new Object();
+		private static var sounds:Object = new Object();
 
 		public static function getTexture(name:String):Texture
 		{
@@ -47,6 +49,17 @@ package asset
 			}
 			
 			return textureAtlases[name];
+		}
+
+		public static function getSound(name:String):Sound
+		{
+			if (sounds[name] == undefined)
+			{
+				var data:Object = create(name);
+				sounds[name] = Sound(data);
+			}
+			
+			return sounds[name];
 		}
 
 		private static function create(name:String):Object

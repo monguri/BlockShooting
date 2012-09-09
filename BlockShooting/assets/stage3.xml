@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <stage>
 	<backGround img="BackGroundBitmap" speed="7"/>
-	<bgm sound=""/>
+	<bgm sound="StandardBGM"/>
 	
 	<enemies>
 		<enemy initX="80" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>

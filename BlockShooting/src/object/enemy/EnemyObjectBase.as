@@ -15,6 +15,7 @@ package object.enemy
 		protected var _bulletClass:Class;
 		protected var _bulletLayer:Sprite;
 		protected var _explosionTexture:String = null;
+		protected var _explosionSound:String = null;
 		protected var _explosionClass:Class;
 		protected var _explosionLayer:Sprite;
 		protected var _initX:int;
@@ -87,6 +88,11 @@ package object.enemy
 			_explosionTexture = value;
 		}
 
+		public function set explosionSound(value:String):void
+		{
+			_explosionSound = value;
+		}
+
 		public function set explosionClass(value:Class):void
 		{
 			_explosionClass = value;
@@ -111,7 +117,6 @@ package object.enemy
 		{
 			_initVx = value;
 		}
-
 
 	}
 }

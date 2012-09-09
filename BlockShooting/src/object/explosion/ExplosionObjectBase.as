@@ -1,5 +1,7 @@
 package object.explosion
 {
+	import flash.media.Sound;
+	
 	import object.MovieClipObjectBase;
 	import object.enemy.EnemyObjectBase;
 	import object.enemy.IFEnemy;
@@ -10,11 +12,13 @@ package object.explosion
 	public class ExplosionObjectBase extends MovieClipObjectBase
 	{
 		private var _target:EnemyObjectBase;
+		protected var _se:Sound;
 		private var _dx:int;
 		private var _dy:int;
 
-		public function ExplosionObjectBase(textures:Vector.<Texture>, fps:Number)
+		public function ExplosionObjectBase(se:Sound, textures:Vector.<Texture>, fps:Number)
 		{
+			_se = se;
 			super(textures, fps);
 			addEventListener(Event.ENTER_FRAME, enterFrameHandler);
 		}

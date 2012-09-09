@@ -6,6 +6,8 @@ package scene
 	
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	import flash.media.Sound;
+	import flash.media.SoundChannel;
 	
 	import object.CollisionEvent;
 	import object.ImageObjectBase;
@@ -34,6 +36,7 @@ package scene
 		private var _bossManager:BossManager;
 		private var _enemyManager:EnemyManager;
 		private var _lifeCounter:LifeCounter;
+		private var _bgm:SoundChannel;
 
 		private var _stage:uint = 0;
 		private var _life:uint;
@@ -99,6 +102,9 @@ package scene
 			_ball.start();
 			_enemyManager.start();
 			
+			var bgm:Sound = AssetsManager.getSound(stageData.bgm[0].@sound);
+			_bgm = bgm.play(0, 10000); // 無限ループをパラメータで指定する方法がないので適当に10000を入れておく
+
 			// デバッグのため
 			enterBossMode();
 		}
@@ -127,6 +133,9 @@ package scene
 			removeEventListener(Event.ENTER_FRAME, bossModeEnterFrameHandler);
 			removeEventListener(Event.ENTER_FRAME, enterFrameHandler);
 			removeEventListener(LifeCounter.LIFE_LOST, lifeLostHandler);
+
+			_bgm.stop();
+			_bgm = null;
 
 			_ball.stop();
 			_ball = null;
@@ -172,6 +181,10 @@ package scene
 			// backGroundをfinalizeせずにスピードだけアップ
 			_backGroundManager.setSpeed(parseInt(xml.backGround[0].@speed));
 
+			_bgm.stop();
+			var bgm:Sound = AssetsManager.getSound(xml.bgm[0].@sound);
+			_bgm = bgm.play(0, 10000); // 無限ループをパラメータで指定する方法がないので適当に10000を入れておく
+		
 			_bossManager = new BossManager();
 			_bossManager.createFromXml(xml.bosses[0]);
 

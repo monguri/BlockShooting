@@ -5,6 +5,7 @@ package object.boss
 	import common.Const;
 	
 	import flash.events.TimerEvent;
+	import flash.media.Sound;
 	import flash.utils.Timer;
 	
 	import object.CollisionEvent;
@@ -105,7 +106,8 @@ package object.boss
 		private function startExplosion(dx:int, dy:int):void
 		{
 			var frames:Vector.<Texture> = AssetsManager.getTextureAtlas(_explosionTexture);
-			var explosion:ExplosionObjectBase = new _explosionClass(frames);
+			var sound:Sound = AssetsManager.getSound(_explosionSound);
+			var explosion:ExplosionObjectBase = new _explosionClass(sound, frames);
 			explosion.target = this;
 			explosion.dx = dx;
 			explosion.dy = dy;

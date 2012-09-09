@@ -24,6 +24,16 @@ package asset
 		public static const Missile2Bitmap:Class;
 		[Embed(source = "assets/explosion.png")]
 		public static const ExplosionBitmap:Class;
+
+		[Embed(source = "assets/standard.mp3")]
+		public static const StandardBGM:Class;
+		[Embed(source = "assets/boss.mp3")]
+		public static const BossBGM:Class;
+		[Embed(source = "assets/shot.mp3")]
+		public static const ShotSE:Class;
+		[Embed(source = "assets/explosion.mp3")]
+		public static const ExplosionSE:Class;
+
 		[Embed(source = "assets/explosion.xml", mimeType="application/octet-stream")]
 		public static const ExplosionXml:Class;
 		[Embed(source = "assets/minibar.png")]

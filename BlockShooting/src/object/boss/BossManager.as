@@ -7,11 +7,9 @@ package object.boss
 	
 	import object.CollisionEvent;
 	import object.IFManager;
-	import object.MovieClipObjectBase;
 	import object.bullet.BulletObjectBase;
 	import object.bullet.SimpleBullet;
 	import object.enemy.EnemyObjectBase;
-	import object.explosion.ExplosionObjectBase;
 	import object.explosion.SimpleExplosion;
 	
 	import starling.display.DisplayObjectContainer;
@@ -56,7 +54,6 @@ package object.boss
 			var objClass:Class;
 			var boss:EnemyObjectBase;
 			var bullet:BulletObjectBase;
-			var explosion:ExplosionObjectBase;
 			var bossBullets:XMLList;
 			var bossExplosions:XMLList;
 			for each (var bossElem:XML in bossElemList)
@@ -87,6 +84,7 @@ package object.boss
 				bossExplosions = bossElem.explosion;
 				var bossExplosion:XML = bossExplosions[0];
 				boss.explosionTexture = bossExplosion.@img;
+				boss.explosionSound = bossExplosion.@sound;
 				boss.explosionClass= getDefinitionByName(bossExplosion.@className) as Class;
 			}
 		}
