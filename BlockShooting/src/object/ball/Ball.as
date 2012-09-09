@@ -60,14 +60,17 @@ package object.ball
 			if (x < 0)
 			{
 				vx = -_vx;
+				x += _vx;
 			}
 			else if (x > Const.SCREEN_WIDTH)
 			{
 				_vx = -_vx;
+				x += _vx;
 			}
 			else if (y < 0)
 			{
 				_vy = -_vy;
+				y += _vy;
 			}
 			else if (y > Const.SCREEN_HEIGHT)
 			{
