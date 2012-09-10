@@ -12,7 +12,7 @@ package asset
 		[Embed(source = "assets/block.png")]
 		public static const BlockBitmap:Class;
 		[Embed(source = "assets/block_collapse.png")]
-		public static const BlockCollapse:Class;
+		public static const BlockCollapseBitmap:Class;
 		[Embed(source = "assets/enemy_big.png")]
 		public static const EnemyBigBitmap:Class;
 		[Embed(source = "assets/boss1.png")]

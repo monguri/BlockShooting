@@ -106,7 +106,7 @@ package scene
 			_bgm = bgm.play(0, 10000); // 無限ループをパラメータで指定する方法がないので適当に10000を入れておく
 
 			// デバッグのため
-			enterBossMode();
+//			enterBossMode();
 		}
 		
 //		private function createStageDataCompleteHandler(event:Event):void
@@ -209,6 +209,7 @@ package scene
 		private function enterFrameHandler(event:Event):void
 		{
 			var intersectRect:Rectangle;
+			var lostedLife:Boolean = false;
 
 			// ボールとバーの当たり判定
 			if (_ball.y > Const.BAR_Y - (_bar.height << 1)
@@ -221,19 +222,33 @@ package scene
 				}
 			}
 
-			// ループが回っている間に、イベントハンドラによってremoveChildされることがあるので
-			// あえて毎ループnumChildrenにアクセスしている
-			if (_ball.y < Const.SCREEN_HEIGHT >> 2) { // ボールが画面半分より上にあるときに衝突判定
-				var enemy:EnemyObjectBase;
-				var numEnemy:int = _enemyManager.numChildren;
-				for (var i:int = numEnemy - 1; i >= 0; i--)
-				{
-					enemy = _enemyManager.getChildAt(i) as EnemyObjectBase;
+			var enemy:EnemyObjectBase;
+			var numEnemy:int = _enemyManager.numChildren;
+			for (var i:int = numEnemy - 1; i >= 0; i--)
+			{
+				enemy = _enemyManager.getChildAt(i) as EnemyObjectBase;
+				// ボールとのあたり判定
+				if (_ball.y < Const.SCREEN_HEIGHT >> 2) { // ボールが画面半分より上にあるときに衝突判定
 					intersectRect = getCollisionRectangle(_ball, enemy);
 					if (intersectRect != null)
 					{
 						sendCollisionEventToBall(_ball, enemy, intersectRect);
 						enemy.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
+					}
+				}
+				
+				// バーと衝突可な場合バーとのあたり判定
+				if (enemy.isBarCollisionTarget)
+				{
+					if (enemy.y > Const.BAR_Y - (_bar.height << 1)
+						&& enemy.y < Const.BAR_Y + (_bar.height << 1)) { // 弾がバーの近傍にあるときだけ衝突判定
+						intersectRect = getCollisionRectangle(_bar, enemy);
+						if (intersectRect != null)
+						{
+							lostedLife = true;
+							_bar.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
+							enemy.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
+						}
 					}
 				}
 			}
@@ -243,11 +258,17 @@ package scene
 			{
 				enterBossMode();
 			}
+
+			if (lostedLife)
+			{
+				lifeLostHandler();
+			}
 		}
 
 		private function bossModeEnterFrameHandler(event:Event):void
 		{
 			var intersectRect:Rectangle;
+			var lostedLife:Boolean = false;
 
 			// ボールとバーの当たり判定
 			if (_ball.y > Const.BAR_Y - (_bar.height << 1)
@@ -300,11 +321,16 @@ package scene
 					intersectRect = getCollisionRectangle(_bar, bullet);
 					if (intersectRect != null)
 					{
-						lifeLostHandler();
+						lostedLife = true;
 						_bar.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
 						bullet.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
 					}
 				}
+			}
+
+			if (lostedLife)
+			{
+				lifeLostHandler();
 			}
 		}
 

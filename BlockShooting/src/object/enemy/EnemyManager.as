@@ -7,7 +7,6 @@ package object.enemy
 	
 	import object.CollisionEvent;
 	import object.IFManager;
-	import object.enemy.SimpleBlock;
 	
 	import starling.display.DisplayObjectContainer;
 	import starling.events.Event;
@@ -21,6 +20,7 @@ package object.enemy
 			// getDefinitionByNameが失敗する。よってClassファイルを作成する機会を作る。
 			var enemyClassDict:Object = new Object();
 			enemyClassDict["SimpleBlock"] = getQualifiedClassName(SimpleBlock);
+			enemyClassDict["CollapseBlock"] = getQualifiedClassName(CollapseBlock);
 		}
 		
 		public function createFromXml(xml:XML):void

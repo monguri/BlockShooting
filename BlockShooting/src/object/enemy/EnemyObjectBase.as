@@ -21,6 +21,7 @@ package object.enemy
 		protected var _initX:int;
 		protected var _initY:int;
 		protected var _initVx:int;
+		protected var _isBarCollisionTarget:Boolean = false;
 		
 		public static const EVENT_TYPE_SELF_DISPOSE:String = "selfDispose";
 
@@ -117,6 +118,12 @@ package object.enemy
 		{
 			_initVx = value;
 		}
+
+		public function get isBarCollisionTarget():Boolean
+		{
+			return _isBarCollisionTarget;
+		}
+
 
 	}
 }
