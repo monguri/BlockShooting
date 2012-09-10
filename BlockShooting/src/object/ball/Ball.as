@@ -4,8 +4,6 @@ package object.ball
 	
 	import common.Const;
 	
-	import flash.display.Bitmap;
-	
 	import object.CollisionEvent;
 	import object.ImageObjectBase;
 	import object.lifeCounter.LifeCounter;

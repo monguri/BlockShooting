@@ -217,6 +217,7 @@ package scene
 				if (intersectRect != null)
 				{
 					sendCollisionEventToBall(_ball, _bar, intersectRect);
+					_bar.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
 				}
 			}
 
@@ -255,6 +256,7 @@ package scene
 				if (intersectRect != null)
 				{
 					sendCollisionEventToBall(_ball, _bar, intersectRect);
+					_bar.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
 				}
 			}
 

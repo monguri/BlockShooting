@@ -4,8 +4,6 @@ package object.bar
 	
 	import common.Const;
 	
-	import flash.display.Bitmap;
-	
 	import object.ImageObjectBase;
 	
 	import starling.events.Event;
@@ -13,9 +11,14 @@ package object.bar
 	import starling.events.TouchEvent;
 	import starling.events.TouchPhase;
 	import starling.textures.Texture;
+	import object.CollisionEvent;
+	import flash.media.Sound;
 	
 	public class Bar extends ImageObjectBase
 	{
+		/** ボールの反射音のSE */
+		public static const SHOT_SE:String = "ShotSE";
+
 		public function Bar()
 		{
 			var texture:Texture = AssetsManager.getTexture("BarBitmap");
@@ -27,12 +30,12 @@ package object.bar
 		
 		public function start():void
 		{
-			
+			addEventListener(CollisionEvent.COLLISION, collisionHandler);
 		}
 		
 		public function stop():void
 		{
-			
+			removeEventListener(CollisionEvent.COLLISION, collisionHandler);
 		}
 
 		private function addedToStageHandler(e:Event):void
@@ -60,6 +63,12 @@ package object.bar
 				// タッチをやめたら速度情報をリセットしておく
 				vx = 0;
 			}
+		}
+
+		private function collisionHandler(e:CollisionEvent):void
+		{
+			var se:Sound = AssetsManager.getSound(SHOT_SE);
+			se.play();
 		}
 	}
 }
