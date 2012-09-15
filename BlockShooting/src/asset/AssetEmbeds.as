@@ -9,10 +9,14 @@ package asset
 		[Embed(source = "assets/ball.png")]
 		public static const BallBitmap:Class;
 
-		[Embed(source = "assets/block.png")]
+		[Embed(source = "assets/blockbrown.png")]
 		public static const BlockBitmap:Class;
-		[Embed(source = "assets/block_collapse.png")]
+		[Embed(source = "assets/blockdarkblue.png")]
 		public static const BlockCollapseBitmap:Class;
+		[Embed(source = "assets/blockthingray.png")]
+		public static const BlockTransparentBitmap:Class;
+		[Embed(source = "assets/blockthinbrown.png")]
+		public static const Block2Life:Class;
 		[Embed(source = "assets/enemy_big.png")]
 		public static const EnemyBigBitmap:Class;
 		[Embed(source = "assets/boss1.png")]

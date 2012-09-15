@@ -11,10 +11,5 @@ package object.enemy
 		{
 			super(texture);
 		}
-		
-		override public function collisionHandler(event:CollisionEvent):void
-		{
-			dispatchEvent(new Event(EnemyObjectBase.EVENT_TYPE_SELF_DISPOSE));
-		}
 	}
 }

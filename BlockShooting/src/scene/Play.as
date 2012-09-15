@@ -232,7 +232,10 @@ package scene
 					intersectRect = getCollisionRectangle(_ball, enemy);
 					if (intersectRect != null)
 					{
-						sendCollisionEventToBall(_ball, enemy, intersectRect);
+						if (enemy.reboundBall)
+						{
+							sendCollisionEventToBall(_ball, enemy, intersectRect);
+						}
 						enemy.dispatchEvent(new CollisionEvent(CollisionEvent.COLLISION));
 					}
 				}

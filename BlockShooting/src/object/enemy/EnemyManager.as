@@ -21,6 +21,8 @@ package object.enemy
 			var enemyClassDict:Object = new Object();
 			enemyClassDict["SimpleBlock"] = getQualifiedClassName(SimpleBlock);
 			enemyClassDict["CollapseBlock"] = getQualifiedClassName(CollapseBlock);
+			enemyClassDict["Life2Block"] = getQualifiedClassName(Life2Block);
+			enemyClassDict["TransparentBlock"] = getQualifiedClassName(TransparentBlock);
 		}
 		
 		public function createFromXml(xml:XML):void

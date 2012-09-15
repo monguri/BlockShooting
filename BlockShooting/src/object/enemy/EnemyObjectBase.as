@@ -5,10 +5,11 @@ package object.enemy
 	
 	import starling.display.Sprite;
 	import starling.textures.Texture;
+	import starling.events.Event;
 
 	public class EnemyObjectBase extends ImageObjectBase implements IFEnemy
 	{
-		private var _life:int;
+		protected var _life:int;
 		protected var _bulletInterval:int;
 		protected var _bulletSpeed:int;
 		protected var _bulletTexture:String = null;
@@ -22,6 +23,7 @@ package object.enemy
 		protected var _initY:int;
 		protected var _initVx:int;
 		protected var _isBarCollisionTarget:Boolean = false;
+		protected var _reboundBall:Boolean = true;
 		
 		public static const EVENT_TYPE_SELF_DISPOSE:String = "selfDispose";
 
@@ -43,6 +45,11 @@ package object.enemy
 
 		public function collisionHandler(event:CollisionEvent):void
 		{
+			_life = _life - 1;
+			if (_life < 1)
+			{
+				dispatchEvent(new Event(EnemyObjectBase.EVENT_TYPE_SELF_DISPOSE));
+			}
 		}
 
 		public function get life():int
@@ -124,5 +131,11 @@ package object.enemy
 		{
 			return _isBarCollisionTarget;
 		}
+
+		public function get reboundBall():Boolean
+		{
+			return _reboundBall;
+		}
+
 	}
 }

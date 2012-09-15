@@ -13,9 +13,6 @@ package object.lifeCounter
 
 	public class LifeCounter extends DisplayObjectContainer
 	{
-		[Embed(source = "assets/minibar.png")]
-		private static const BallBitmap:Class;
-
 		private var _life:TextField;
 
 		/** ライフ減少イベントの識別子 */
