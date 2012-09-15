@@ -4,7 +4,7 @@
 	<bgm sound="BossBGM"/>
 	
 	<bosses>
-		<boss life="3" bulletInterval="4000" className="object.boss.SimpleBoss" img="BossParentBitmap" initX="320" initY="160" initVx="0">
+		<boss life="5" bulletInterval="4000" className="object.boss.SimpleBoss" img="BossParentBitmap" initX="320" initY="160" initVx="0">
 			<bullet speed="6" className="object.bullet.SimpleBullet" img="Missile1Bitmap"/>
 			<explosion className="object.explosion.SimpleExplosion" img="Explosion" sound="ExplosionSE"/>
 		</boss>

@@ -9,13 +9,13 @@
 		<enemy initX="176" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		<enemy initX="224" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		<enemy initX="272" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
+		<!--
 		<enemy initX="320" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		<enemy initX="368" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		<enemy initX="416" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		<enemy initX="464" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		<enemy initX="512" initY="80" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 
-		<!--
 		<enemy initX="80" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		<enemy initX="128" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
 		<enemy initX="176" initY="96" life="1" className="object.enemy.SimpleBlock" img="BlockBitmap"/>
