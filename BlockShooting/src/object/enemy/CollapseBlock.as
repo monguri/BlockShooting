@@ -18,12 +18,6 @@ package object.enemy
 			_isBarCollisionTarget = true;
 		}
 		
-		override public function start():void
-		{
-			x = _initX;
-			y = _initY;
-		}
-
 		override public function collisionHandler(event:CollisionEvent):void
 		{
 			addEventListener(Event.ENTER_FRAME, enterFrameHandler);

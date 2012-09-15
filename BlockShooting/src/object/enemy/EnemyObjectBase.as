@@ -32,7 +32,8 @@ package object.enemy
 
 		public function start():void
 		{
-			
+			x = _initX;
+			y = _initY;
 		}
 
 		public function stop():void
@@ -123,7 +124,5 @@ package object.enemy
 		{
 			return _isBarCollisionTarget;
 		}
-
-
 	}
 }
