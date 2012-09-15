@@ -10,7 +10,7 @@ package object.enemy
 	public class CollapseBlock extends EnemyObjectBase
 	{
 		private var GRAVITY:int = 3;
-		private var i:Number = 0;
+		private var dt:Number = 0;
 
 		public function CollapseBlock(texture:Texture)
 		{
@@ -31,8 +31,8 @@ package object.enemy
 		
 		private function enterFrameHandler(event:Event):void
 		{
-			y += GRAVITY * i;
-			i += 0.1;
+			y += GRAVITY * dt;
+			dt += 0.1;
 
 			if (y - height > Const.SCREEN_HEIGHT)
 			{
